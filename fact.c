@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 void factorial() {
-    int n, i;
-    long long factorial = 1; // Use long long for larger factorials
+    int num;
+    unsigned long long factorial = 1; // Use unsigned long long for larger factorials
 
     printf("Enter a non-negative integer: ");
-    scanf("%d", &n);
+    scanf("%d", &num);
 
-    if (n < 0) {
+    if (num < 0) {
         printf("Factorial is not defined for negative numbers.\n");
     } else {
-        for (i = 1; i <= n; i++) {
-            factorial *= i; // Equivalent to factorial = factorial * i;
+        for (int i = 1; i <= num; i++) {
+            factorial *= i; // factorial = factorial * i;
         }
-        printf("Factorial of %d = %lld\n", n, factorial);
+        printf("Factorial of %d = %llu\n", num, factorial);
     }
 
-   // return 0;
+    //return 0;
 }
